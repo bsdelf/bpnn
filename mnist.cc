@@ -125,7 +125,7 @@ auto Pixel2Input(const std::vector<std::vector<unsigned char>>& pixels) -> std::
 
 void PrintPixel(std::vector<unsigned char> pixel, int width)
 {
-    for (int ip = 0; ip < pixel.size(); ++ip) {
+    for (size_t ip = 0; ip < pixel.size(); ++ip) {
         std::cout << ((pixel[ip] > std::numeric_limits<unsigned char>::max()/2) ? "#" : " ");
         if ((ip+1) % width == 0)
             std::cout << std::endl;

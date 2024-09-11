@@ -40,7 +40,7 @@ void bpnn::init(int ninput, int nhidden, int noutput, double rate1, double rate2
 
     std::random_device rd;
     std::mt19937 gen(rd());
-    std::uniform_int_distribution<double> dis(-100, 100);
+    std::uniform_int_distribution<int> dis(-100, 100);
     auto rand = [&](double) { return dis(gen)/100.1f; };
     _hiddenweight.transform(rand);
     _hiddenbias.transform(rand);
